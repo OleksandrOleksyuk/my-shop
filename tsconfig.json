@@ -18,7 +18,8 @@
     "paths": {
       "@/model/*": ["./src/model/*"],
       "@/shared/*": ["./src/shared/*"],
-      "@/services/*": ["./src/services/*"]
+      "@/services/*": ["./src/services/*"],
+      "@/pocketbase": ["./src/pocketbase.ts"]
     },
 
     /* Linting */
