@@ -1,4 +1,4 @@
-function CheckoutPage() {
+export function CheckoutPage() {
   return (
     <div>
       <h1 className="title">CHECKOUT</h1>
@@ -10,5 +10,3 @@ function CheckoutPage() {
     </div>
   );
 }
-
-export default CheckoutPage;
