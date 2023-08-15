@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { 
   CartPage, CheckoutPage, CMSOrdersPage, CMSPage, CMSProductsPage, LoginPage, ShopPage, ThanksPage
 } from "./pages";
-import { Navbar } from "@/shared/index";
+import { Navbar } from "@/shared/";
 
 function App() {
   return (
