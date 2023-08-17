@@ -4,11 +4,14 @@ import { Spinner } from "@/shared/";
 import { useEffect, useState } from "react";
 import { pb } from "../../pocketbase";
 import { ProductCard } from "./components/ProductCard";
+import { useCart, useCartPanel } from "@/services/cart";
 
 export function ShopPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setisLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
+  const openCartPanel = useCartPanel((state) => state.openOverlay);
+  const addToCart = useCart((state) => state.addToCart);
 
   useEffect(() => {
     setisLoading(true);
@@ -23,9 +26,11 @@ export function ShopPage() {
       .finally(() => setisLoading(false));
   }, []);
 
-  function addToCart(p: Partial<Product>) {
-    console.log(p);
-  }
+  // function addToCart(product: Partial<Product>) {
+  //   console.log(product);
+  //   openCartPanel();
+  //   addToCart(product);
+  // }
 
   return (
     <div>
@@ -35,10 +40,16 @@ export function ShopPage() {
       {isError && <ServerError />}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">
-        {products.map((p) => {
+        {products.map((product) => {
           return (
-            <div key={p.id}>
-              <ProductCard product={p} onAddToCart={addToCart} />
+            <div key={product.id}>
+              <ProductCard
+                product={product}
+                onAddToCart={() => {
+                  openCartPanel();
+                  addToCart(product);
+                }}
+              />
             </div>
           );
         })}
