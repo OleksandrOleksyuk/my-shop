@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# MyShop - README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MyShop is an application I've created using TypeScript and React.js. I personally followed the course by [Fabio Biondi](https://github.com/fabiobiondi), where I learned to utilize technologies such as React.js with TypeScript, Tailwind CSS, React Router, and state management concepts using hooks like useState, useNavigate, useReducer, useEffect. Additionally, I explored the integration of a CMS and an API with Pocketbase, which offers a simple way to create databases suitable for small-scale projects.
 
-Currently, two official plugins are available:
+## Used Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I've leveraged several modern technologies to build MyShop:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **React.js con TypeScript**: I've developed interactive user interfaces using the popular React library with enhanced type safety.
+- **Tailwind CSS**: I've employed a utility-based CSS framework to simplify styling and responsiveness.
+- **React Router**: I've implemented smooth navigation between different sections of the application.
+- **Pocketbase**: I've created and managed lightweight CMS and API components, well-suited for small-scale projects.
+- **Zustand**: I've utilized Zustand for efficient global state management.
