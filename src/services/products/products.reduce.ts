@@ -43,13 +43,14 @@ export function productsReducer(state: ProductsState, action: ProductsActions) {
         products: state.products.map((item) =>
           item.id === payload.id ? payload : item
         ),
+        activeItem: null,
         error: null,
         pending: false,
       };
     case "productSetActive":
       return {
         ...state,
-        activeItem: state.activeItem?.id === payload ? null : state.activeItem,
+        activeItem: state.activeItem?.id === payload ? null : payload,
       };
     case "pending":
       return { ...state, pending: payload, error: null };

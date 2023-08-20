@@ -49,7 +49,7 @@ export function useProductsService() {
     }
   }
 
-  function setActiveItem(product: Product | null) {
+  function setActiveItem(product: Product | {}) {
     dispatch({ type: "productSetActive", payload: product });
   }
 
