@@ -3,7 +3,7 @@ import * as ProductsApi from "./products.api";
 import {
   INITIAL_STATE,
   productsReducer,
-} from "@/services/products/products.reduce";
+} from "@/services/products/products.reducer";
 import { Product } from "@/model/product";
 
 export function useProductsService() {
